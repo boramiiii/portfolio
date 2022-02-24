@@ -26,8 +26,28 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
+  --size-border-radius: 4px;
 }
 
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
 /* Typography */
 
 h1 {
@@ -59,3 +79,37 @@ p {
 }
 
 /* -------------------set finish------------------------------- */
+
+/* nav bar  */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-blue);
+  align-items: center;
+  padding: 16px;
+}
+.navbar_logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar_menu {
+  display: flex;
+}
+
+.navbar_menu_item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.navbar_menu_item.active {
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar_menu_item:hover {
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
