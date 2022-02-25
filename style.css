@@ -102,15 +102,18 @@ button {
 .navbar_logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
+  font-family: 'Noto Serif', serif;
 }
 
 .navbar_menu {
   display: flex;
+  font-family: 'Noto Serif', serif;
 }
 
 .navbar_menu_item {
-  padding: 8px 12px;
-  margin: 0 4px;
+  padding: 10px 15px;
+  margin: 0 10px;
   color: var(--color-white);
   cursor: pointer;
 }
@@ -147,9 +150,10 @@ button {
   font-size: var(--font-regular);
   font-weight: var(--font-medium);
   margin: 24px;
-  padding: 8px 12px;
+  padding: 10px 15px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+  font-family: 'Noto Serif', serif;
 }
 
 /* section common */
