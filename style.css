@@ -30,7 +30,7 @@
   --size-border-radius: 4px;
 
   /* Animation */
-  --animation-duration: all 300ms ease;
+  --animation-duration: 300ms;
 }
 
 * {
@@ -136,8 +136,8 @@ button {
 }
 
 .home_avatar {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: 2px solid var(--color-blue);
 }
@@ -210,6 +210,7 @@ button {
 .skill {
   margin-bottom: 16px;
 }
+
 .skillset {
   display: flex;
   background-color: var(--color-light-grey);
@@ -247,4 +248,115 @@ button {
 .tools,
 .ect {
   padding: 20px;
+}
+
+/* Work */
+.work_category {
+  margin: 40px;
+}
+.category_btn {
+  border: 1px solid var(--color-dark-grey);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category_btn.active,
+.category_btn:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+.category_btn.active .category_count,
+.category_btn:hover .category_count {
+  opacity: 1;
+  top: 0;
+}
+
+.category_count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
+.work_projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  display: flex;
+  background-color: var(--color-white);
+  justify-content: center;
+  align-items: center;
+}
+.project_img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.project_description {
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
+}
+.project:hover .project_description {
+  opacity: 0.6;
+  transform: translateY(0);
+}
+
+.project_description h3 {
+  color: var(--color-white);
+}
+.project_description h3:after {
+  content: '';
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-dark-white);
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: 8px;
+}
+/* Contact */
+#contact {
+  background-color: var(--color-blue);
+}
+
+.contact_title,
+.contact_email,
+.contact_rights {
+  color: var(--color-white);
+}
+.contact_title {
+  margin: 32px 0;
+}
+.contact_links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+  transition: all var(--animation-duration) ease-in;
+}
+.contact_links i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
 }
