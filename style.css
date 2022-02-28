@@ -101,6 +101,11 @@ button {
   background-color: transparent;
   align-items: center;
   padding: 16px;
+  transition: all var(--animation-duration) ease-in;
+}
+#navbar.navbar--dark {
+  background-color: var(--color-blue);
+  padding: 8px;
 }
 .navbar_logo {
   font-size: var(--font-medium);
@@ -138,6 +143,7 @@ button {
   color: var(--color-white);
   display: none;
 }
+
 /* home */
 
 #home {
