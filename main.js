@@ -13,6 +13,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
+//Click menu page
 const navbarMenu = document.querySelector('.navbar_menu');
 navbarMenu.addEventListener('click', (event)=>{
     console.log(event.target.dataset.link);
@@ -33,6 +34,14 @@ contactMe.addEventListener('click', (event) => {
     scrollIntoView('#contact');
 
 });
+
+
+//make home slowly fade to window scroll down
+const home = document.querySelector('.home_container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    home.style.opacity = 1-window.scrollY/homeHeight;
+})
 
 //scroll 이벤트 정의
 function scrollIntoView(selector){
