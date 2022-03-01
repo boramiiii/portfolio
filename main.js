@@ -42,6 +42,20 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
     home.style.opacity = 1-window.scrollY/homeHeight;
 })
+//show arrow up button
+const arrowUp = document.querySelector('.arrow_up');
+document.addEventListener('scroll',()=>{
+    if(window.scrollY > homeHeight/2){
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible');
+    }
+})
+arrowUp.addEventListener('click',(event)=>{
+    scrollIntoView('#home');
+})
+
+
 
 //scroll 이벤트 정의
 function scrollIntoView(selector){
