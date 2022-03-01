@@ -25,3 +25,17 @@ navbarMenu.addEventListener('click', (event)=>{
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior : 'smooth'});
 });
+
+//Clcik on contact Me
+
+const contactMe = document.querySelector('.home_contact');
+contactMe.addEventListener('click', (event) => {
+    scrollIntoView('#contact');
+
+});
+
+//scroll 이벤트 정의
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior : 'smooth'});
+}
