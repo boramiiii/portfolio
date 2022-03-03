@@ -309,6 +309,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
 }
 .project {
   position: relative;
@@ -319,6 +321,14 @@ button {
   background-color: var(--color-white);
   justify-content: center;
   align-items: center;
+}
+
+.project.invisible {
+  display: none;
+}
+.work_projects.ani_out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 .project_img {
   max-width: 100%;
