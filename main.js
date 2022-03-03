@@ -22,9 +22,19 @@ navbarMenu.addEventListener('click', (event)=>{
     if (link == null){
         return;
     }
+    navbarMenu.classList.remove('open');
+    
     console.log(event.target.dataset.link);
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior : 'smooth'});
+});
+
+//navbar toggle btn
+const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+
+navbarToggleBtn.addEventListener('click', ()=> {
+    console.log('눌렸다!');
+    navbarMenu.classList.toggle('open');
 });
 
 //Clcik on contact Me
