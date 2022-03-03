@@ -124,16 +124,18 @@ button {
   padding: 10px 15px;
   margin: 0 10px;
   color: var(--color-white);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
   cursor: pointer;
 }
-.navbar_menu_item.active {
+/* .navbar_menu_item.active {
   border: 1px solid var(--color-blue);
   border-radius: var(--size-border-radius);
-}
+} */
 
 .navbar_menu_item:hover {
   border: 1px solid var(--color-white);
-  border-radius: var(--size-border-radius);
+  /* border-radius: var(--size-border-radius); */
 }
 
 .navbar_toggle-btn {
@@ -280,7 +282,7 @@ button {
   padding: 8px 48px;
 }
 
-.category_btn.active,
+.category_btn.selected,
 .category_btn:hover {
   background-color: var(--color-blue);
   color: var(--color-white);

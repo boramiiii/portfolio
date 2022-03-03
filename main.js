@@ -64,7 +64,14 @@ workBtnContainer.addEventListener('click', (e)=>{
     if(filter==null){
         return;
     }
+    //remove selection 
+    const active = document.querySelector('.category_btn.selected')
+
     projectContainer.classList.add('ani_out');
+    active.classList.remove('selected');
+    const target = e.target.nodeName  === 'BUTTON' ? e.target : 
+                        e.target.parentNode;
+    target.classList.add('selected');
 
     setTimeout(()=>{
         projects.forEach((project)=>{
